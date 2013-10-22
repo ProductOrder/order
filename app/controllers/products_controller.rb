@@ -25,7 +25,7 @@ class ProductsController < ApplicationController
   # GET /products/new.json
   def new
     @product = Product.new
-
+      
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @product }
@@ -41,7 +41,7 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
     @product = Product.new(params[:product])
-    @user = User.create( params[:user] )
+    #@user = User.create( params[:user] )
     respond_to do |format|
       if @product.save
         format.html { redirect_to @product, notice: 'Product was successfully created.' }
