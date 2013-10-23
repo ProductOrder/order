@@ -8,9 +8,7 @@
   <dd><%= @product.name %></dd>
   <dt><strong><%= model_class.human_attribute_name(:price) %>:</strong></dt>
   <dd><%= @product.price %></dd>
-   <dd><a href="<%= @product.attach.url %> ">
-              <b> File attached </b></a>
- <%= image_tag @product.pic.url(:thumb) %></dd>
+  <dd><%= image_tag @product.pic.url(:thumb) %></dd>
 </dl>
 
 <div class="form-actions">
