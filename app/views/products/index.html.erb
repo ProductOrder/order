@@ -6,10 +6,11 @@
   <thead>
     <tr>
       <th>Sr no</th>
+      <th><%= model_class.human_attribute_name(:pic) %></th>
       <th><%= model_class.human_attribute_name(:name) %></th>
       <th><%= model_class.human_attribute_name(:price) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
-      <th><%= model_class.human_attribute_name(:pic) %></th>
+      
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -17,13 +18,15 @@
     <%i=1%>
     <% @products.each do |product| %>
       <tr>
+       
        <!--  <td><%= link_to product.id, product_path(product) %></td> -->
       
         <td><%= i %></td>
+        <td><%=display_pic(product) %></td>
         <td><%= product.name %></td>
         <td><%= product.price %></td>       
         <td><%= product.created_at.strftime("%d-%M-%Y") %></td>
-         <td><%= product.pic %></td>
+        
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_product_path(product), :class => 'btn btn-mini' %>
