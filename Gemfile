@@ -4,9 +4,9 @@ gem 'rails', '3.2.11'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
+gem 'yaml_db'
 gem 'sqlite3'
-
+gem 'mysql2'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -21,7 +21,7 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
    gem 'uglifier', '>= 1.0.3'
 end
-
+gem 'will_paginate',"> 3.0"
 gem 'jquery-rails'
 #gem "paperclip", "~> 3.0"
 # To use ActiveModel has_secure_password
